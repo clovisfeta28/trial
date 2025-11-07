@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Class Feedback System</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Submit Class Feedback</h1>
+    <form id="feedbackForm">
+      <label for="course">Select Course:</label>
+      <select id="course" required>
+        <option value="">--Choose a course--</option>
+        <option value="CS101">Computer Science 101</option>
+        <option value="MATH201">Mathematics 201</option>
+        <option value="ENG301">English 301</option>
+      </select>
+
+      <label>Rating:</label>
+      <div class="stars">
+        <input type="radio" name="rating" value="1" required />★
+        <input type="radio" name="rating" value="2" />★★
+        <input type="radio" name="rating" value="3" />★★★
+        <input type="radio" name="rating" value="4" />★★★★
+        <input type="radio" name="rating" value="5" />★★★★★
+      </div>
+
+      <label for="comments">Comments:</label>
+      <textarea id="comments" rows="4" placeholder="Your suggestions..."></textarea>
+
+      <button type="submit">Submit Feedback</button>
+    </form>
+    <p id="status"></p>
+  </div>
+
+  <!-- Firebase SDKs -->
+<script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js"></script>
+
+  <script src="app.js"></script>
+</body>
+</html>
